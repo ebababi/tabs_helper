@@ -1,0 +1,10 @@
+Description:
+    Creates helper resources in relevant public destinations.
+
+Example:
+    rails generate tabs_helper
+
+    This will create:
+        public/stylesheets/tabs_helper.css
+        public/stylesheets/tabs_helper.ie.css
+        public/images/tabs_helper/tab-*

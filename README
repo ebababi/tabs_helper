@@ -1,0 +1,63 @@
+= TabsHelper
+
+Tabs Helper plugin is an ActionView helper that facilitates the use of the tabs
+UI element. Furthermore, each tab may be optionally create a view scope, so to
+replicate the actual tab behavour in the controller level.
+
+== Installation
+
+After installing the plugin on the rails enviroment it is required for the
+helper's static files to be copied in the public location, for the helper to be
+activated in the application controller and for the application layout to
+include the CSS files. A generator have been created for those tasks:
+
+    $ rails generate tabs_helper
+
+Nevertheless, it is still required to update the application layout:
+
+    <%= stylesheet_link_tag 'tabs_helper' %>
+
+and for IE bugs:
+
+    <%= stylesheet_link_tag 'tabs_helper.ie' %>
+
+== Usage
+
+Tabs are created through the use of the <tt>tabs_for</tt> method. This method
+scopes a builder in its provided block that provide the <tt>tab</tt> method,
+which, in its turn, defines a tab, along with its optional view scope.
+
+The specified tabs generate the required HTML tags and on the availability of
+the plugin provided image and stylesheet resources it completes the UI element.
+
+Tab series cannot be nest, nevertheless they can be characterized as primary
+or secondary, and appear alike, by passing <tt>:class => :primary</tt> or
+<tt>:class => :secondary</tt> in the rightmost argument of the tabs_for method
+which is an option hash. The default for a series is to appear as primary.
+
+=== Examples
+
+This creates a simple tab series:
+
+  <%= tabs_for :tab_series do |t| %>
+    <%= t.tab 'First Tab', first_tab_path() %>
+    <%= t.tab 'Second Tab', 'http://example.com/second_tab_path' %>
+  <% end %>
+
+This creates a tab series with scoped views:
+  <%= tabs_for :search do |t| %>
+    <%= t.tab 'Simple', search_path(:section => :simple) do %>
+      <%= form_tag :search do %>
+        Search for: <%= text_field_tag :query %>
+      <% end %>
+    <% end %>
+    <%= t.tab 'Advanced', search_path(:section => :advanced) do %>
+      <%= form_tag :search do %>
+        Search for: <%= text_field_tag :query %>
+        Search private documents: <%= check_box_tag :private %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+
+Copyright (c) 2010 Nikolaos Anastopoulos, released under the MIT license

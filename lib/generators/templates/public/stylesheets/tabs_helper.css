@@ -1,0 +1,170 @@
+div .tabs {
+    margin: 0 0 5px 0;
+}
+
+.tabs ul.primary {
+    display: inline-block;
+    width: 100%;
+}
+
+.tabs ul.primary:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    display: none;
+}
+
+.tabs ul.primary {
+    border-collapse: collapse;
+    height: auto;
+    margin: 0;
+    padding: 0 0 0 10px;
+    border-width: 0;
+    list-style: none;
+    white-space: nowrap;
+    line-height: normal;
+    background: url('../images/tabs_helper/tab-bar.png') repeat-x left bottom;
+}
+
+.tabs ul.primary li {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tabs ul.primary li a {
+    display: block;
+    height: 24px;
+    margin: 0;
+    padding: 0 0 0 5px;
+    border-width: 0;
+    font-weight: bold;
+    text-decoration: none;
+    color: #777;
+    background-color: transparent;
+    background: url('../images/tabs_helper/tab-left.png') no-repeat left -38px;
+}
+
+.tabs ul.primary li a .tab {
+    display: block;
+    height: 20px;
+    margin: 0;
+    padding: 4px 13px 0 6px;
+    border-width: 0;
+    line-height: 20px;
+    background: url('../images/tabs_helper/tab-right.png') no-repeat right -38px;
+}
+
+.tabs ul.primary li a:hover {
+    border-width: 0;
+    background-color: transparent;
+    background: url('../images/tabs_helper/tab-left.png') no-repeat left -76px;
+}
+
+.tabs ul.primary li a:hover .tab {
+    background: url('../images/tabs_helper/tab-right.png') no-repeat right -76px;
+}
+
+.tabs ul.primary li.active a,
+.tabs ul.primary li.active a:hover {
+    border-width: 0;
+    color: #000;
+    background-color: transparent;
+    background: url('../images/tabs_helper/tab-left.png') no-repeat left 0;
+}
+
+.tabs ul.primary li.active a .tab,
+.tabs ul.primary li.active a:hover .tab {
+    background: url('../images/tabs_helper/tab-right.png') no-repeat right 0;
+}
+
+.tabs ul.secondary {
+    display: inline-block;
+    width: 100%;
+}
+
+.tabs ul.secondary:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    display: none;
+}
+
+.tabs ul.secondary {
+    margin: 0;
+    padding: 0 0 0 5px;
+    border-bottom: 1px solid #c0c0c0;
+    list-style: none;
+    white-space: nowrap;
+    background: url('../images/tabs_helper/tab-secondary-bg.png') repeat-x left bottom;
+}
+
+.tabs ul.secondary li {
+    display: inline;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 5px 0;
+    border-right: none;
+    list-style: none;
+}
+
+.tabs ul.secondary a {
+    display: block;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #c0c0c0;
+    text-decoration: none;
+    color: #777;
+    background: url('../images/tabs_helper/tab-secondary.png') repeat-x left -56px;
+}
+
+.tabs ul.secondary a .tab {
+    display: block;
+    height: 18px;
+    margin: 0;
+    padding: 3px 8px;
+    line-height: 18px;
+}
+
+.tabs ul.secondary a:hover {
+    background: url('../images/tabs_helper/tab-secondary.png') repeat-x left bottom;
+ }
+
+.tabs ul.secondary a.active,
+.tabs ul.secondary a.active:hover {
+    border: 1px solid #c0c0c0;
+    color: #000;
+    background: url('../images/tabs_helper/tab-secondary.png') repeat-x left top;
+}
+
+.tabs_frame {
+    margin-top: 5px;
+}
+
+.tabs_wired_frame {
+    border-bottom: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;
+    border-right: 1px solid #C0C0C0;
+    margin-top: 0;
+    padding: .5em;
+}
+
+
+div .tabs {
+    margin: 0 0 -3px 0;
+}
+
+.tabs ul.primary {
+    width: 99%;
+}
+
+.tabs ul.secondary {
+    width: 99.5%;
+}

@@ -1,0 +1,66 @@
+.tabs ul.primary {
+    height: 1%;
+    display: block;
+}
+
+.tabs ul.primary {
+    width: 100%;
+    width: auto;
+}
+
+.tabs ul.primary li a {
+    display: inline;
+    display: inline-block;
+    background: url('../images/tabs_helper/tab-left-ie.png') no-repeat left -38px;
+}
+
+.tabs ul.primary li a .tab {
+    display: inline;
+    display: inline-block;
+    background: url('../images/tabs_helper/tab-right-ie.png') no-repeat right -38px;
+    cursor: pointer;
+}
+
+.tabs ul.primary li a:hover {
+    background: url('../images/tabs_helper/tab-left-ie.png') no-repeat left -76px;
+}
+
+.tabs ul.primary li a:hover .tab {
+    background: url('../images/tabs_helper/tab-right-ie.png') no-repeat right -76px;
+}
+
+.tabs ul.primary li.active a,
+.tabs ul.primary li.active a:hover {
+    background: url('../images/tabs_helper/tab-left-ie.png') no-repeat left 0;
+}
+
+.tabs ul.primary li.active a .tab,
+.tabs ul.primary li.active a:hover .tab {
+    background: url('../images/tabs_helper/tab-right-ie.png') no-repeat right 0;
+}
+
+.tabs ul.secondary {
+    height: 1%;
+    display: block;
+}
+
+.tabs ul.secondary {
+    width: 100%;
+    width: auto;
+}
+
+.tabs ul.secondary li a {
+    display: inline;
+    display: inline-block;
+}
+
+.tabs ul.secondary li a .tab {
+    display: inline;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+div.tabs {
+    margin: 0 0 0px 0;
+}
